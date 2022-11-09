@@ -6,16 +6,21 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="Chamber" />
+        <module name="elasticsearch" />
+        <module name="boot" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="boot" target="8" />
       <module name="Chamber" target="1.8" />
+      <module name="elasticsearch" target="8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="Chamber" options="-parameters" />
+      <module name="boot" options="-parameters" />
+      <module name="elasticsearch" options="-parameters" />
     </option>
   </component>
 </project>
