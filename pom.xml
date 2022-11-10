@@ -31,16 +31,19 @@
     </modules>
     <dependencyManagement>
         <dependencies>
+<!--            @SpringBootApplication等注解-->
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter</artifactId>
                 <version>2.7.5</version>
             </dependency>
+<!--            @Configuration等注解-->
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-autoconfigure</artifactId>
                 <version>2.7.5</version>
             </dependency>
+<!--            @Component等注解-->
             <dependency>
                 <groupId>org.springframework</groupId>
                 <artifactId>spring-context</artifactId>
