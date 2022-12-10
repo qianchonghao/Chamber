@@ -9,9 +9,7 @@ import org.apache.http.auth.UsernamePasswordCredentials;
 import org.apache.http.client.CredentialsProvider;
 import org.apache.http.impl.client.BasicCredentialsProvider;
 import org.apache.http.impl.nio.client.HttpAsyncClientBuilder;
-import org.elasticsearch.client.RestClient;
-import org.elasticsearch.client.RestClientBuilder;
-import org.elasticsearch.client.RestHighLevelClient;
+import org.elasticsearch.client.*;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.stereotype.Component;
 
@@ -20,7 +18,19 @@ import java.io.InputStreamReader;
 
 @Component
 public class ElasticSearchClient implements InitializingBean {
-    private RestHighLevelClient highLevelClient;
+    private RestHighLevelClient highClient;
+    private static final RequestOptions COMMON_OPTIONS;
+
+    static {
+        RequestOptions.Builder builder = RequestOptions.DEFAULT.toBuilder();
+
+        // 默认缓存限制为100MB，此处修改为30MB。
+        builder.setHttpAsyncResponseConsumerFactory(
+                new HttpAsyncResponseConsumerFactory
+                        .HeapBufferedResponseConsumerFactory(30 * 1024 * 1024));
+        COMMON_OPTIONS = builder.build();
+    }
+
     @Override
     public void afterPropertiesSet() throws Exception {
         InputStream is = this.getClass().getClassLoader().getResourceAsStream("elasticsearch.json");
@@ -47,7 +57,7 @@ public class ElasticSearchClient implements InitializingBean {
                 });
 
         // RestHighLevelClient实例通过REST low-level client builder进行构造。
-        RestHighLevelClient highClient = new RestHighLevelClient(builder);
-
+        highClient = new RestHighLevelClient(builder);
     }
+
 }

@@ -6,7 +6,7 @@
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>2.7.5</version>
-        <relativePath/> <!-- lookup parent from repository -->
+<!--        <relativePath/> &lt;!&ndash; lookup parent from repository &ndash;&gt;-->
     </parent>
 
 
@@ -25,12 +25,54 @@
 
     <modules>
         <module>elasticsearch</module>
-        <module>elasticsearch</module>
         <module>boot</module>
+        <module>trace</module>
         <!-- <module>swotxu-webbase</module>-->
     </modules>
     <dependencyManagement>
         <dependencies>
+<!--            <dependency>-->
+<!--                <groupId>org.apache.logging.log4j</groupId>-->
+<!--                <artifactId>log4j-core</artifactId>-->
+<!--                <version>2.7.1</version>-->
+<!--            </dependency>-->
+<!--            <dependency>-->
+<!--                <groupId>org.apache.logging.log4j</groupId>-->
+<!--                <artifactId>log4j-api</artifactId>-->
+<!--                &lt;!&ndash;            <version>2.7.1</version>&ndash;&gt;-->
+<!--            </dependency>-->
+            <!-- https://mvnrepository.com/artifact/ch.qos.logback/logback-classic -->
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>1.18.24</version>
+            </dependency>
+            <dependency>
+                <groupId>ch.qos.logback</groupId>
+                <artifactId>logback-classic</artifactId>
+                <version>1.2.3</version>
+            </dependency>
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>jcl-over-slf4j</artifactId>
+                <version>1.7.26</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-lang3</artifactId>
+                <version>3.12.0</version>
+            </dependency>
+            <dependency>
+                <groupId>com.google.guava</groupId>
+                <artifactId>guava</artifactId>
+                <version>31.1-jre</version>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>fastjson</artifactId>
+                <version>1.2.75</version>
+            </dependency>
 <!--            @SpringBootApplication等注解-->
             <dependency>
                 <groupId>org.springframework.boot</groupId>
@@ -50,23 +92,26 @@
                 <version>5.3.23</version>
             </dependency>
         </dependencies>
+
     </dependencyManagement>
 
 
     <build>
         <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-                <configuration>
-                    <excludes>
-                        <exclude>
-                            <groupId>org.projectlombok</groupId>
-                            <artifactId>lombok</artifactId>
-                        </exclude>
-                    </excludes>
-                </configuration>
-            </plugin>
+<!--            spring-boot-maven-plugin作用： 将各个module打包fatjar，可通过 java -jar 独立运行。
+                对于没有mainClass的module，将package失败-->
+<!--            <plugin>-->
+<!--                <groupId>org.springframework.boot</groupId>-->
+<!--                <artifactId>spring-boot-maven-plugin</artifactId>-->
+<!--                <configuration>-->
+<!--                    <excludes>-->
+<!--                        <exclude>-->
+<!--                            <groupId>org.projectlombok</groupId>-->
+<!--                            <artifactId>lombok</artifactId>-->
+<!--                        </exclude>-->
+<!--                    </excludes>-->
+<!--                </configuration>-->
+<!--            </plugin>-->
         </plugins>
     </build>
 
