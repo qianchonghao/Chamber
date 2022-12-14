@@ -11,9 +11,9 @@ import org.springframework.test.context.junit4.SpringRunner;
  * @author qch
  * @since 2022/12/6 4:51 下午
  */
-@RunWith(SpringRunner.class)  //底层用junit  SpringJUnit4ClassRunner
-
 //@SpringBootTest(classes = ChamberApplication.class)//启动整个springboot工程
+
+@RunWith(SpringRunner.class)  //底层用junit  SpringJUnit4ClassRunner
 @SpringBootTest()//启动整个springboot工程
 public class TraceTest {
     @Autowired

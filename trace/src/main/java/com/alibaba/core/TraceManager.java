@@ -152,7 +152,6 @@ public class TraceManager implements InitializingBean {
 
     @Data
     public static class TraceStructure {
-        // trace structure
         private String tName;
         private List<SpanStructure> spans;
     }

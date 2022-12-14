@@ -90,13 +90,8 @@ public class BizDemo {
         scope.close();
     }
 
-
-
     private void secondBiz(){
         log.info("second biz");
     }
 
-    private void test(){
-
-    }
 }
