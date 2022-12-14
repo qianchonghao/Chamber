@@ -1,11 +1,10 @@
 package com.alibaba.biz;
 
-import com.alibaba.core.TraceConfiguration;
+import com.alibaba.core.TraceManager;
 import io.opentracing.Scope;
 import io.opentracing.Span;
 import io.opentracing.Tracer;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -17,7 +16,7 @@ import org.springframework.stereotype.Component;
 @Slf4j
 public class BizDemo {
     @Autowired
-    private TraceConfiguration traceConfiguration;
+    private TraceManager traceConfiguration;
 
 
     public void execute(){
@@ -97,4 +96,7 @@ public class BizDemo {
         log.info("second biz");
     }
 
+    private void test(){
+
+    }
 }

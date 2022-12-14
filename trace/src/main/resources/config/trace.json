@@ -1,5 +1,32 @@
 {
   "endpoint": "http://tracing-analysis-dc-hz.aliyuncs.com/adapt_hrk8gqjyhw@2cf1f7d12c3b616_hrk8gqjyhw@53df7ad2afe8301/api/traces",
-  "serviceName": "chamberTrace"
-
+  "serviceName": "chamberTrace",
+  "traceStructures": [
+    {
+      "tName": "inbound",
+      "spans": [
+        {
+          "sName": "invite",
+          "tags": {}
+        },
+        {
+          "sName": "user_rtp",
+          "tags": {}
+        },
+        {
+          "sName": "ivr_rtp",
+          "tags": {}
+        }
+      ]
+    },
+    {
+      "tName": "outbound",
+      "spans": [
+        {
+          "sName": "invite",
+          "tags": {}
+        }
+      ]
+    }
+  ]
 }
