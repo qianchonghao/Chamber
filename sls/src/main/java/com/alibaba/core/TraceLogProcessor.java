@@ -1,5 +1,6 @@
 package com.alibaba.core;
 
+import com.alibaba.log.Node;
 import com.alibaba.log.TraceLogger;
 import com.aliyun.openservices.log.common.*;
 import com.aliyun.openservices.loghub.client.ILogHubCheckPointTracker;
@@ -8,6 +9,7 @@ import com.aliyun.openservices.loghub.client.interfaces.ILogHubProcessor;
 import lombok.extern.slf4j.Slf4j;
 
 import java.util.List;
+import java.util.UUID;
 
 /**
  * @author qch
@@ -48,6 +50,7 @@ public class TraceLogProcessor implements ILogHubProcessor {
                     FastLogContent content = log.getContents(cIdx);
                     System.out.println(content.getKey() + "\t:\t" + content.getValue());
 //                    TraceLogger.getLogger().info(content.getKey() + "\t:\t" + content.getValue());
+                    TraceLogger.info(Node.invite, String.valueOf(UUID.randomUUID()), "key={},value={}", content.getKey(), content.getValue());
                 }
             }
         }
