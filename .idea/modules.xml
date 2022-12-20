@@ -5,6 +5,8 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/Chamber.iml" filepath="$PROJECT_DIR$/.idea/Chamber.iml" />
       <module fileurl="file://$PROJECT_DIR$/boot/boot.iml" filepath="$PROJECT_DIR$/boot/boot.iml" />
       <module fileurl="file://$PROJECT_DIR$/elasticsearch/elasticsearch.iml" filepath="$PROJECT_DIR$/elasticsearch/elasticsearch.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sls/sls.iml" filepath="$PROJECT_DIR$/sls/sls.iml" />
+      <module fileurl="file://$PROJECT_DIR$/trace/trace.iml" filepath="$PROJECT_DIR$/trace/trace.iml" />
     </modules>
   </component>
 </project>

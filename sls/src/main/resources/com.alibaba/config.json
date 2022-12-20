@@ -1,0 +1,8 @@
+{
+  "endPoint": "cn-hangzhou.log.aliyuncs.com",
+  "project": "k8s-hangzhou-pre",
+  "logStore": "trace",
+  "consumerGroup": "trace-consumer-group",
+  "accessKey": "ak",
+  "secretKet": "sk"
+}

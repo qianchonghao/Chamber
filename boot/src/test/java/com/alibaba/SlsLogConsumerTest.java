@@ -1,5 +1,6 @@
 package com.alibaba;
 
+import com.alibaba.service.LogConsumeStarter;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,7 +19,11 @@ public class SlsLogConsumerTest {
 
     @Test
     public void start() {
-        starter.start();
+        try {
+            Thread.sleep(1000*60*60);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
 
     }
 }

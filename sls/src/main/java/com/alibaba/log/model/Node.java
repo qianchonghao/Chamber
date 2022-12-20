@@ -1,6 +1,6 @@
-package com.alibaba.log;
+package com.alibaba.log.model;
 
-import static com.alibaba.log.Scene.*;
+import static com.alibaba.log.model.Scene.*;
 
 /**
  * @author qch

@@ -1,0 +1,6 @@
+{
+  "password": "Xcloud_2020",
+  "initConnectionSqls": "set names utf8mb4;",
+  "url": "jdbc:mysql://rm-uf6ro35gma7a0o7plzo.mysql.rds.aliyuncs.com:3306/cco_xixi_hotline_session?&characterEncoding=UTF-8&useSSL=false&serverTimezone=GMT%2B8&zeroDateTimeBehavior=convertToNull",
+  "username": "xspace_system"
+}

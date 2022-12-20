@@ -1,12 +1,13 @@
-package com.alibaba.log;
+package com.alibaba.log.model;
 
+import com.alibaba.log.model.Node;
 import com.google.common.collect.Lists;
 
 import java.util.List;
 
 
 
-import static com.alibaba.log.Node.*;
+import static com.alibaba.log.model.Node.*;
 
 /**
  * @author qch
